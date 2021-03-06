@@ -7,7 +7,7 @@ void printLoginReq(const LoginReq& req)
 {
     cout << req.user << endl
         << req.token << endl
-        << req.unix_timestamp << endl
+        << req.unix_time << endl
         << req.lang << endl
         << req.client_os << endl
         << req.app_version << endl
@@ -20,7 +20,7 @@ int main()
     LoginReq req;
     req.user = "user001";
     req.token = "pnyuza0h2cdkvxvh54v3dn";
-    req.unix_timestamp = 1615004452;
+    req.unix_time = 1615004452;
     req.lang = "zh-CN";
     req.client_os = "Windows 10";
     req.app_version = "1.0.1";

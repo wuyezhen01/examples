@@ -34,7 +34,7 @@ struct LoginReq
 {
     string user;            // 账号
     string token;           // 令牌
-    int64_t unix_timestamp; // 时间戳
+    int64_t unix_time;      // 时间戳
     string lang;            // 区域和语言
     string client_os;       // iOS, Android, Web
     string app_version;     // 客户端版本
