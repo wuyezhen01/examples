@@ -11,7 +11,7 @@ enum MessageID {
 
 
 // 下线通知
-message DisconnectNotify {
+message DisconnectNtf {
     int32 err_code = 1;     // 错误码
     string reason = 2;      // 原因(重复登录或者被踢下线)
 }

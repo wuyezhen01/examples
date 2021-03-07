@@ -17,19 +17,19 @@
 
 PROTOBUF_PRAGMA_INIT_SEG
 namespace protocol {
-constexpr DisconnectNotify::DisconnectNotify(
+constexpr DisconnectNtf::DisconnectNtf(
   ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
   : reason_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
   , err_code_(0){}
-struct DisconnectNotifyDefaultTypeInternal {
-  constexpr DisconnectNotifyDefaultTypeInternal()
+struct DisconnectNtfDefaultTypeInternal {
+  constexpr DisconnectNtfDefaultTypeInternal()
     : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~DisconnectNotifyDefaultTypeInternal() {}
+  ~DisconnectNtfDefaultTypeInternal() {}
   union {
-    DisconnectNotify _instance;
+    DisconnectNtf _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT DisconnectNotifyDefaultTypeInternal _DisconnectNotify_default_instance_;
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT DisconnectNtfDefaultTypeInternal _DisconnectNtf_default_instance_;
 constexpr LoginReq::LoginReq(
   ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
   : user_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
@@ -69,12 +69,12 @@ static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_s
 
 const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_message_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protocol::DisconnectNotify, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::protocol::DisconnectNtf, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::protocol::DisconnectNotify, err_code_),
-  PROTOBUF_FIELD_OFFSET(::protocol::DisconnectNotify, reason_),
+  PROTOBUF_FIELD_OFFSET(::protocol::DisconnectNtf, err_code_),
+  PROTOBUF_FIELD_OFFSET(::protocol::DisconnectNtf, reason_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::protocol::LoginReq, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -97,32 +97,32 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_message_2eproto::offsets[] PRO
   PROTOBUF_FIELD_OFFSET(::protocol::LoginAck, session_),
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, sizeof(::protocol::DisconnectNotify)},
+  { 0, -1, sizeof(::protocol::DisconnectNtf)},
   { 7, -1, sizeof(::protocol::LoginReq)},
   { 19, -1, sizeof(::protocol::LoginAck)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::protocol::_DisconnectNotify_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::protocol::_DisconnectNtf_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::protocol::_LoginReq_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::protocol::_LoginAck_default_instance_),
 };
 
 const char descriptor_table_protodef_message_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n\rmessage.proto\022\010protocol\"4\n\020DisconnectN"
-  "otify\022\020\n\010err_code\030\001 \001(\005\022\016\n\006reason\030\002 \001(\t\""
-  "\211\001\n\010LoginReq\022\014\n\004user\030\001 \001(\t\022\r\n\005token\030\002 \001("
-  "\t\022\021\n\tunix_time\030\003 \001(\003\022\020\n\010language\030\004 \001(\t\022\021"
-  "\n\tclient_os\030\005 \001(\t\022\023\n\013device_type\030\006 \001(\t\022\023"
-  "\n\013app_version\030\007 \001(\t\"C\n\010LoginAck\022\020\n\010err_c"
-  "ode\030\001 \001(\005\022\024\n\014access_token\030\002 \001(\t\022\017\n\007sessi"
-  "on\030\003 \001(\005*c\n\tMessageID\022\014\n\010MSG_NONE\020\000\022\032\n\025M"
-  "SG_DISCONNECT_NOTIFY\020\350\007\022\026\n\021MSG_LOGIN_REQ"
-  "UEST\020\351\007\022\024\n\017MSG_LOGIN_REPLY\020\352\007b\006proto3"
+  "\n\rmessage.proto\022\010protocol\"1\n\rDisconnectN"
+  "tf\022\020\n\010err_code\030\001 \001(\005\022\016\n\006reason\030\002 \001(\t\"\211\001\n"
+  "\010LoginReq\022\014\n\004user\030\001 \001(\t\022\r\n\005token\030\002 \001(\t\022\021"
+  "\n\tunix_time\030\003 \001(\003\022\020\n\010language\030\004 \001(\t\022\021\n\tc"
+  "lient_os\030\005 \001(\t\022\023\n\013device_type\030\006 \001(\t\022\023\n\013a"
+  "pp_version\030\007 \001(\t\"C\n\010LoginAck\022\020\n\010err_code"
+  "\030\001 \001(\005\022\024\n\014access_token\030\002 \001(\t\022\017\n\007session\030"
+  "\003 \001(\005*c\n\tMessageID\022\014\n\010MSG_NONE\020\000\022\032\n\025MSG_"
+  "DISCONNECT_NOTIFY\020\350\007\022\026\n\021MSG_LOGIN_REQUES"
+  "T\020\351\007\022\024\n\017MSG_LOGIN_REPLY\020\352\007b\006proto3"
   ;
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_message_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_message_2eproto = {
-  false, false, 397, descriptor_table_protodef_message_2eproto, "message.proto", 
+  false, false, 394, descriptor_table_protodef_message_2eproto, "message.proto", 
   &descriptor_table_message_2eproto_once, nullptr, 0, 3,
   schemas, file_default_instances, TableStruct_message_2eproto::offsets,
   file_level_metadata_message_2eproto, file_level_enum_descriptors_message_2eproto, file_level_service_descriptors_message_2eproto,
@@ -155,17 +155,17 @@ bool MessageID_IsValid(int value) {
 
 // ===================================================================
 
-class DisconnectNotify::_Internal {
+class DisconnectNtf::_Internal {
  public:
 };
 
-DisconnectNotify::DisconnectNotify(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+DisconnectNtf::DisconnectNtf(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
   RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:protocol.DisconnectNotify)
+  // @@protoc_insertion_point(arena_constructor:protocol.DisconnectNtf)
 }
-DisconnectNotify::DisconnectNotify(const DisconnectNotify& from)
+DisconnectNtf::DisconnectNtf(const DisconnectNtf& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   reason_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
@@ -174,37 +174,37 @@ DisconnectNotify::DisconnectNotify(const DisconnectNotify& from)
       GetArena());
   }
   err_code_ = from.err_code_;
-  // @@protoc_insertion_point(copy_constructor:protocol.DisconnectNotify)
+  // @@protoc_insertion_point(copy_constructor:protocol.DisconnectNtf)
 }
 
-void DisconnectNotify::SharedCtor() {
+void DisconnectNtf::SharedCtor() {
 reason_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 err_code_ = 0;
 }
 
-DisconnectNotify::~DisconnectNotify() {
-  // @@protoc_insertion_point(destructor:protocol.DisconnectNotify)
+DisconnectNtf::~DisconnectNtf() {
+  // @@protoc_insertion_point(destructor:protocol.DisconnectNtf)
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void DisconnectNotify::SharedDtor() {
+void DisconnectNtf::SharedDtor() {
   GOOGLE_DCHECK(GetArena() == nullptr);
   reason_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
-void DisconnectNotify::ArenaDtor(void* object) {
-  DisconnectNotify* _this = reinterpret_cast< DisconnectNotify* >(object);
+void DisconnectNtf::ArenaDtor(void* object) {
+  DisconnectNtf* _this = reinterpret_cast< DisconnectNtf* >(object);
   (void)_this;
 }
-void DisconnectNotify::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+void DisconnectNtf::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 }
-void DisconnectNotify::SetCachedSize(int size) const {
+void DisconnectNtf::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
 
-void DisconnectNotify::Clear() {
-// @@protoc_insertion_point(message_clear_start:protocol.DisconnectNotify)
+void DisconnectNtf::Clear() {
+// @@protoc_insertion_point(message_clear_start:protocol.DisconnectNtf)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -214,7 +214,7 @@ void DisconnectNotify::Clear() {
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* DisconnectNotify::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* DisconnectNtf::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
@@ -233,7 +233,7 @@ const char* DisconnectNotify::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPA
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
           auto str = _internal_mutable_reason();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "protocol.DisconnectNotify.reason"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "protocol.DisconnectNtf.reason"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -259,9 +259,9 @@ failure:
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* DisconnectNotify::_InternalSerialize(
+::PROTOBUF_NAMESPACE_ID::uint8* DisconnectNtf::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:protocol.DisconnectNotify)
+  // @@protoc_insertion_point(serialize_to_array_start:protocol.DisconnectNtf)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -276,7 +276,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_reason().data(), static_cast<int>(this->_internal_reason().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protocol.DisconnectNotify.reason");
+      "protocol.DisconnectNtf.reason");
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_reason(), target);
   }
@@ -285,12 +285,12 @@ failure:
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:protocol.DisconnectNotify)
+  // @@protoc_insertion_point(serialize_to_array_end:protocol.DisconnectNtf)
   return target;
 }
 
-size_t DisconnectNotify::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protocol.DisconnectNotify)
+size_t DisconnectNtf::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:protocol.DisconnectNtf)
   size_t total_size = 0;
 
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -320,23 +320,23 @@ size_t DisconnectNotify::ByteSizeLong() const {
   return total_size;
 }
 
-void DisconnectNotify::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:protocol.DisconnectNotify)
+void DisconnectNtf::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:protocol.DisconnectNtf)
   GOOGLE_DCHECK_NE(&from, this);
-  const DisconnectNotify* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<DisconnectNotify>(
+  const DisconnectNtf* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<DisconnectNtf>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:protocol.DisconnectNotify)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:protocol.DisconnectNtf)
     ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:protocol.DisconnectNotify)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:protocol.DisconnectNtf)
     MergeFrom(*source);
   }
 }
 
-void DisconnectNotify::MergeFrom(const DisconnectNotify& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:protocol.DisconnectNotify)
+void DisconnectNtf::MergeFrom(const DisconnectNtf& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:protocol.DisconnectNtf)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -350,32 +350,32 @@ void DisconnectNotify::MergeFrom(const DisconnectNotify& from) {
   }
 }
 
-void DisconnectNotify::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:protocol.DisconnectNotify)
+void DisconnectNtf::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:protocol.DisconnectNtf)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-void DisconnectNotify::CopyFrom(const DisconnectNotify& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:protocol.DisconnectNotify)
+void DisconnectNtf::CopyFrom(const DisconnectNtf& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:protocol.DisconnectNtf)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool DisconnectNotify::IsInitialized() const {
+bool DisconnectNtf::IsInitialized() const {
   return true;
 }
 
-void DisconnectNotify::InternalSwap(DisconnectNotify* other) {
+void DisconnectNtf::InternalSwap(DisconnectNtf* other) {
   using std::swap;
   _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
   reason_.Swap(&other->reason_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   swap(err_code_, other->err_code_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata DisconnectNotify::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata DisconnectNtf::GetMetadata() const {
   return GetMetadataStatic();
 }
 
@@ -1062,8 +1062,8 @@ void LoginAck::InternalSwap(LoginAck* other) {
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace protocol
 PROTOBUF_NAMESPACE_OPEN
-template<> PROTOBUF_NOINLINE ::protocol::DisconnectNotify* Arena::CreateMaybeMessage< ::protocol::DisconnectNotify >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::protocol::DisconnectNotify >(arena);
+template<> PROTOBUF_NOINLINE ::protocol::DisconnectNtf* Arena::CreateMaybeMessage< ::protocol::DisconnectNtf >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::protocol::DisconnectNtf >(arena);
 }
 template<> PROTOBUF_NOINLINE ::protocol::LoginReq* Arena::CreateMaybeMessage< ::protocol::LoginReq >(Arena* arena) {
   return Arena::CreateMessageInternal< ::protocol::LoginReq >(arena);

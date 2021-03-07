@@ -56,9 +56,9 @@ struct TableStruct_message_2eproto {
 extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_message_2eproto;
 ::PROTOBUF_NAMESPACE_ID::Metadata descriptor_table_message_2eproto_metadata_getter(int index);
 namespace protocol {
-class DisconnectNotify;
-struct DisconnectNotifyDefaultTypeInternal;
-extern DisconnectNotifyDefaultTypeInternal _DisconnectNotify_default_instance_;
+class DisconnectNtf;
+struct DisconnectNtfDefaultTypeInternal;
+extern DisconnectNtfDefaultTypeInternal _DisconnectNtf_default_instance_;
 class LoginAck;
 struct LoginAckDefaultTypeInternal;
 extern LoginAckDefaultTypeInternal _LoginAck_default_instance_;
@@ -67,7 +67,7 @@ struct LoginReqDefaultTypeInternal;
 extern LoginReqDefaultTypeInternal _LoginReq_default_instance_;
 }  // namespace protocol
 PROTOBUF_NAMESPACE_OPEN
-template<> ::protocol::DisconnectNotify* Arena::CreateMaybeMessage<::protocol::DisconnectNotify>(Arena*);
+template<> ::protocol::DisconnectNtf* Arena::CreateMaybeMessage<::protocol::DisconnectNtf>(Arena*);
 template<> ::protocol::LoginAck* Arena::CreateMaybeMessage<::protocol::LoginAck>(Arena*);
 template<> ::protocol::LoginReq* Arena::CreateMaybeMessage<::protocol::LoginReq>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
@@ -102,24 +102,24 @@ inline bool MessageID_Parse(
 }
 // ===================================================================
 
-class DisconnectNotify PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protocol.DisconnectNotify) */ {
+class DisconnectNtf PROTOBUF_FINAL :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protocol.DisconnectNtf) */ {
  public:
-  inline DisconnectNotify() : DisconnectNotify(nullptr) {}
-  virtual ~DisconnectNotify();
-  explicit constexpr DisconnectNotify(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline DisconnectNtf() : DisconnectNtf(nullptr) {}
+  virtual ~DisconnectNtf();
+  explicit constexpr DisconnectNtf(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  DisconnectNotify(const DisconnectNotify& from);
-  DisconnectNotify(DisconnectNotify&& from) noexcept
-    : DisconnectNotify() {
+  DisconnectNtf(const DisconnectNtf& from);
+  DisconnectNtf(DisconnectNtf&& from) noexcept
+    : DisconnectNtf() {
     *this = ::std::move(from);
   }
 
-  inline DisconnectNotify& operator=(const DisconnectNotify& from) {
+  inline DisconnectNtf& operator=(const DisconnectNtf& from) {
     CopyFrom(from);
     return *this;
   }
-  inline DisconnectNotify& operator=(DisconnectNotify&& from) noexcept {
+  inline DisconnectNtf& operator=(DisconnectNtf&& from) noexcept {
     if (GetArena() == from.GetArena()) {
       if (this != &from) InternalSwap(&from);
     } else {
@@ -137,20 +137,20 @@ class DisconnectNotify PROTOBUF_FINAL :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return GetMetadataStatic().reflection;
   }
-  static const DisconnectNotify& default_instance() {
+  static const DisconnectNtf& default_instance() {
     return *internal_default_instance();
   }
-  static inline const DisconnectNotify* internal_default_instance() {
-    return reinterpret_cast<const DisconnectNotify*>(
-               &_DisconnectNotify_default_instance_);
+  static inline const DisconnectNtf* internal_default_instance() {
+    return reinterpret_cast<const DisconnectNtf*>(
+               &_DisconnectNtf_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     0;
 
-  friend void swap(DisconnectNotify& a, DisconnectNotify& b) {
+  friend void swap(DisconnectNtf& a, DisconnectNtf& b) {
     a.Swap(&b);
   }
-  inline void Swap(DisconnectNotify* other) {
+  inline void Swap(DisconnectNtf* other) {
     if (other == this) return;
     if (GetArena() == other->GetArena()) {
       InternalSwap(other);
@@ -158,7 +158,7 @@ class DisconnectNotify PROTOBUF_FINAL :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(DisconnectNotify* other) {
+  void UnsafeArenaSwap(DisconnectNtf* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetArena() == other->GetArena());
     InternalSwap(other);
@@ -166,17 +166,17 @@ class DisconnectNotify PROTOBUF_FINAL :
 
   // implements Message ----------------------------------------------
 
-  inline DisconnectNotify* New() const final {
-    return CreateMaybeMessage<DisconnectNotify>(nullptr);
+  inline DisconnectNtf* New() const final {
+    return CreateMaybeMessage<DisconnectNtf>(nullptr);
   }
 
-  DisconnectNotify* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
-    return CreateMaybeMessage<DisconnectNotify>(arena);
+  DisconnectNtf* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<DisconnectNtf>(arena);
   }
   void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
   void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void CopyFrom(const DisconnectNotify& from);
-  void MergeFrom(const DisconnectNotify& from);
+  void CopyFrom(const DisconnectNtf& from);
+  void MergeFrom(const DisconnectNtf& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -190,13 +190,13 @@ class DisconnectNotify PROTOBUF_FINAL :
   inline void SharedCtor();
   inline void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(DisconnectNotify* other);
+  void InternalSwap(DisconnectNtf* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "protocol.DisconnectNotify";
+    return "protocol.DisconnectNtf";
   }
   protected:
-  explicit DisconnectNotify(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  explicit DisconnectNtf(::PROTOBUF_NAMESPACE_ID::Arena* arena);
   private:
   static void ArenaDtor(void* object);
   inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
@@ -243,7 +243,7 @@ class DisconnectNotify PROTOBUF_FINAL :
   void _internal_set_err_code(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // @@protoc_insertion_point(class_scope:protocol.DisconnectNotify)
+  // @@protoc_insertion_point(class_scope:protocol.DisconnectNtf)
  private:
   class _Internal;
 
@@ -675,79 +675,79 @@ class LoginAck PROTOBUF_FINAL :
   #pragma GCC diagnostic push
   #pragma GCC diagnostic ignored "-Wstrict-aliasing"
 #endif  // __GNUC__
-// DisconnectNotify
+// DisconnectNtf
 
 // int32 err_code = 1;
-inline void DisconnectNotify::clear_err_code() {
+inline void DisconnectNtf::clear_err_code() {
   err_code_ = 0;
 }
-inline ::PROTOBUF_NAMESPACE_ID::int32 DisconnectNotify::_internal_err_code() const {
+inline ::PROTOBUF_NAMESPACE_ID::int32 DisconnectNtf::_internal_err_code() const {
   return err_code_;
 }
-inline ::PROTOBUF_NAMESPACE_ID::int32 DisconnectNotify::err_code() const {
-  // @@protoc_insertion_point(field_get:protocol.DisconnectNotify.err_code)
+inline ::PROTOBUF_NAMESPACE_ID::int32 DisconnectNtf::err_code() const {
+  // @@protoc_insertion_point(field_get:protocol.DisconnectNtf.err_code)
   return _internal_err_code();
 }
-inline void DisconnectNotify::_internal_set_err_code(::PROTOBUF_NAMESPACE_ID::int32 value) {
+inline void DisconnectNtf::_internal_set_err_code(::PROTOBUF_NAMESPACE_ID::int32 value) {
   
   err_code_ = value;
 }
-inline void DisconnectNotify::set_err_code(::PROTOBUF_NAMESPACE_ID::int32 value) {
+inline void DisconnectNtf::set_err_code(::PROTOBUF_NAMESPACE_ID::int32 value) {
   _internal_set_err_code(value);
-  // @@protoc_insertion_point(field_set:protocol.DisconnectNotify.err_code)
+  // @@protoc_insertion_point(field_set:protocol.DisconnectNtf.err_code)
 }
 
 // string reason = 2;
-inline void DisconnectNotify::clear_reason() {
+inline void DisconnectNtf::clear_reason() {
   reason_.ClearToEmpty();
 }
-inline const std::string& DisconnectNotify::reason() const {
-  // @@protoc_insertion_point(field_get:protocol.DisconnectNotify.reason)
+inline const std::string& DisconnectNtf::reason() const {
+  // @@protoc_insertion_point(field_get:protocol.DisconnectNtf.reason)
   return _internal_reason();
 }
-inline void DisconnectNotify::set_reason(const std::string& value) {
+inline void DisconnectNtf::set_reason(const std::string& value) {
   _internal_set_reason(value);
-  // @@protoc_insertion_point(field_set:protocol.DisconnectNotify.reason)
+  // @@protoc_insertion_point(field_set:protocol.DisconnectNtf.reason)
 }
-inline std::string* DisconnectNotify::mutable_reason() {
-  // @@protoc_insertion_point(field_mutable:protocol.DisconnectNotify.reason)
+inline std::string* DisconnectNtf::mutable_reason() {
+  // @@protoc_insertion_point(field_mutable:protocol.DisconnectNtf.reason)
   return _internal_mutable_reason();
 }
-inline const std::string& DisconnectNotify::_internal_reason() const {
+inline const std::string& DisconnectNtf::_internal_reason() const {
   return reason_.Get();
 }
-inline void DisconnectNotify::_internal_set_reason(const std::string& value) {
+inline void DisconnectNtf::_internal_set_reason(const std::string& value) {
   
   reason_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArena());
 }
-inline void DisconnectNotify::set_reason(std::string&& value) {
+inline void DisconnectNtf::set_reason(std::string&& value) {
   
   reason_.Set(
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:protocol.DisconnectNotify.reason)
+  // @@protoc_insertion_point(field_set_rvalue:protocol.DisconnectNtf.reason)
 }
-inline void DisconnectNotify::set_reason(const char* value) {
+inline void DisconnectNtf::set_reason(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   reason_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(value), GetArena());
-  // @@protoc_insertion_point(field_set_char:protocol.DisconnectNotify.reason)
+  // @@protoc_insertion_point(field_set_char:protocol.DisconnectNtf.reason)
 }
-inline void DisconnectNotify::set_reason(const char* value,
+inline void DisconnectNtf::set_reason(const char* value,
     size_t size) {
   
   reason_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:protocol.DisconnectNotify.reason)
+  // @@protoc_insertion_point(field_set_pointer:protocol.DisconnectNtf.reason)
 }
-inline std::string* DisconnectNotify::_internal_mutable_reason() {
+inline std::string* DisconnectNtf::_internal_mutable_reason() {
   
   return reason_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArena());
 }
-inline std::string* DisconnectNotify::release_reason() {
-  // @@protoc_insertion_point(field_release:protocol.DisconnectNotify.reason)
+inline std::string* DisconnectNtf::release_reason() {
+  // @@protoc_insertion_point(field_release:protocol.DisconnectNtf.reason)
   return reason_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
-inline void DisconnectNotify::set_allocated_reason(std::string* reason) {
+inline void DisconnectNtf::set_allocated_reason(std::string* reason) {
   if (reason != nullptr) {
     
   } else {
@@ -755,7 +755,7 @@ inline void DisconnectNotify::set_allocated_reason(std::string* reason) {
   }
   reason_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), reason,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:protocol.DisconnectNotify.reason)
+  // @@protoc_insertion_point(field_set_allocated:protocol.DisconnectNtf.reason)
 }
 
 // -------------------------------------------------------------------
