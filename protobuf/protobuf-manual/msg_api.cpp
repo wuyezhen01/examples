@@ -20,6 +20,8 @@ Message* parseMessageV1(MessageID msgid, Buffer& buf)
     case MSG_LOGIN_REPLY:
         msg = new LoginAck();
         break;
+    default:
+        return nullptr;
     }
     if (msg->ParseFromArray(buf.data(), (int)buf.size()))
     {

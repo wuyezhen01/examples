@@ -16,7 +16,6 @@ enum MessageID {
     MSG_LOGIN_REPLY = 1002;
 }
 
-
 // 下线通知
 message DisconnectNtf {
     option (MsgID) = MSG_DISCONNECT_NOTIFY;

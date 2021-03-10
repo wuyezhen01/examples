@@ -52,8 +52,6 @@ void initProtoRegistry(const char* filename)
         const Descriptor* descriptor = fileDescriptor->message_type(i);
         if (descriptor != nullptr)
         {
-            auto opts = descriptor->options();
-            auto v = opts.GetExtension(MsgID);
             const std::string& name = descriptor->name();
             if (endsWith(name, "Ntf") || endsWith(name, "Req") || endsWith(name, "Ack")) {
                 uint32_t hash = fnvHash(name);
