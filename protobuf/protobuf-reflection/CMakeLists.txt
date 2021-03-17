@@ -11,5 +11,5 @@ add_executable (pbreflect "main.cpp" "msg_api.h" "msg_api.cpp" "message.pb.h" "m
 
 if (MSVC)
   #set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
-  target_link_libraries(pbreflect "D:/Repo/examples/3rdparty/protobuf-3.15.5/dist/libprotobuf.lib")
+  target_link_libraries(pbreflect "../../3rdparty/protobuf-3.15.5/dist/libprotobuf.lib")
 endif()
