@@ -6,7 +6,7 @@ using namespace std;
 // 使用反射
 void test_reflection()
 {
-    initProtoRegistry("message.proto");
+    initProtoRegistryV1();
 
     protocol::LoginReq req;
     req.set_user("user001");
@@ -31,7 +31,7 @@ void test_reflection()
 // 使用MessageOption
 void test_msg_option()
 {
-    initProtoRegistryV2("message.proto");
+    initProtoRegistryV2();
 
     protocol::LoginReq req;
     req.set_user("user001");
@@ -53,7 +53,7 @@ void test_msg_option()
 
 int main(int argc, char* argv[])
 {
-    //test_reflection();
+    test_reflection();
     test_msg_option();
 
     return 0;
