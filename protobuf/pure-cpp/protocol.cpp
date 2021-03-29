@@ -3,7 +3,7 @@
 #include <algorithm>
 
 
-// ±àÂëÊý×Ö
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 template <typename T>
 typename std::enable_if <
     std::is_integral<T>::value
@@ -16,7 +16,7 @@ encodeNumber(const T& number, Buffer& buf)
     memcpy(&buf[current], &number, sizeof(T));
 }
 
-// ½âÂëÊý×Ö
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 template <typename T>
 typename std::enable_if <
     std::is_integral<T>::value
@@ -33,7 +33,7 @@ typename std::enable_if <
     pos += size;
 }
 
-// ±àÂë×Ö·û´®
+// ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½
 static void encodeString(const std::string& s, Buffer& buf)
 {
     encodeNumber(int32_t(s.length()), buf);
@@ -42,7 +42,7 @@ static void encodeString(const std::string& s, Buffer& buf)
     memcpy(&buf[current], s.data(), s.length());
 }
 
-// ½âÂë×Ö·û´®
+// ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½
 static void decodeString(std::string& s, Buffer& buf, int& pos)
 {
     int32_t length = 0;
@@ -57,7 +57,7 @@ static void decodeString(std::string& s, Buffer& buf, int& pos)
     pos += size;
 }
 
-// ±àÂëDisconnectNotify
+// ï¿½ï¿½ï¿½ï¿½DisconnectNotify
 void DisconnectNotify::encodeTo(Buffer& buf)
 {
     encodeNumber(this->err_code, buf);
@@ -74,7 +74,7 @@ void LoginReq::encodeTo(Buffer& buf)
 {
     encodeString(this->user, buf);
     encodeString(this->token, buf);
-    encodeNumber(this->unix_timestamp, buf);
+    encodeNumber(this->unix_time, buf);
     encodeString(this->lang, buf);
     encodeString(this->client_os, buf);
     encodeString(this->app_version, buf);
@@ -84,7 +84,7 @@ void LoginReq::decodeFrom(Buffer& buf, int& pos)
 {
     decodeString(this->user, buf, pos);
     decodeString(this->token, buf, pos);
-    decodeNumber(&this->unix_timestamp, buf, pos);
+    decodeNumber(&this->unix_time, buf, pos);
     decodeString(this->lang, buf, pos);
     decodeString(this->client_os, buf, pos);
     decodeString(this->app_version, buf, pos);
