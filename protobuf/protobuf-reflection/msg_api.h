@@ -5,12 +5,12 @@
 
 typedef std::string Buffer;
 
-// 使用反射
+// 浣跨敤娑堟伅鍚嶇О鐨刪ash娉ㄥ唽
 void initProtoRegistryV1();
 uint32_t getMessageID(google::protobuf::Message*);
 google::protobuf::Message* createMessage(uint32_t msgId);
 
 
-// 使用MessageOption
+// 浣跨敤MessageOption鎸囧畾鐨処D娉ㄥ唽
 void initProtoRegistryV2();
 google::protobuf::Message* createMessageV2(protocol::MessageID msgId);

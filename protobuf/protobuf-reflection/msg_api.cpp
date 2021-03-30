@@ -14,6 +14,7 @@ static std::unordered_map<protocol::MessageID, const Descriptor*> registry2;
 const std::string package_name = "protocol";
 
 
+// æ˜¯å¦ä»¥`suffix`ç»“å°¾
 static bool endsWith(const std::string& name, const std::string& suffix)
 {
     if (name.length() < suffix.length())
@@ -29,6 +30,7 @@ static bool endsWith(const std::string& name, const std::string& suffix)
     return true;
 }
 
+// æ˜¯å¦ä»¥`prefix`å¼€å¤´
 static bool startsWith(const std::string& name, const std::string& prefix) 
 {
     if (name.length() < prefix.length())
@@ -44,9 +46,9 @@ static bool startsWith(const std::string& name, const std::string& prefix)
     return true;
 }
 
-// Req½áÎ²´ú±íÇëÇó
-// Ack½áÎ²´ú±íÏìÓ¦
-// Ntf½áÎ²´ú±íÍ¨Öª
+// Reqä»£è¡¨è¯·æ±‚æ¶ˆæ¯
+// Ackä»£è¡¨å“åº”æ¶ˆæ¯
+// Ntfé€šçŸ¥æ¶ˆæ¯
 static bool hasSuffix(const std::string& name) 
 {
     return endsWith(name, "Ntf") || endsWith(name, "Req") || endsWith(name, "Ack");
@@ -65,7 +67,7 @@ static uint32_t fnvHash(const std::string& name)
 }
 
 
-// ¸ù¾İÃû³Æ×¢²áËùÓĞÏûÏ¢
+// æ ¹æ®æ¶ˆæ¯åç§°çš„hashæ³¨å†Œ
 void initProtoRegistryV1()
 {
     const DescriptorPool* pool = DescriptorPool::generated_pool();
@@ -112,7 +114,7 @@ uint32_t getMessageID(google::protobuf::Message* message)
     return 0;
 }
 
-// ¸ù¾İID´´½¨ÏûÏ¢
+
 google::protobuf::Message* createMessage(uint32_t msgId)
 {
     uint32_t hash = msgId;
@@ -129,7 +131,7 @@ google::protobuf::Message* createMessage(uint32_t msgId)
     return nullptr;
 }
 
-// ×¢²áËùÓĞÏûÏ¢
+// æ ¹æ®MessageOptionæŒ‡å®šçš„IDæ³¨å†Œ
 void initProtoRegistryV2()
 {
     const DescriptorPool* pool = DescriptorPool::generated_pool();
@@ -165,7 +167,7 @@ void initProtoRegistryV2()
     }
 }
 
-// ¸ù¾İID´´½¨ÏûÏ¢
+
 google::protobuf::Message* createMessageV2(protocol::MessageID msgId)
 {
     auto iter = registry2.find(msgId);

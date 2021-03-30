@@ -6,6 +6,7 @@ using namespace google::protobuf;
 using namespace protocol;
 
 
+// 鏍规嵁娑堟伅ID瑙ｆ瀽娑堟伅缁撴瀯鍐呭
 Message* parseMessageV1(MessageID msgid, Buffer& buf)
 {
     Message* msg = nullptr;
@@ -32,7 +33,7 @@ Message* parseMessageV1(MessageID msgid, Buffer& buf)
 }
 
 
-// 使用宏映射消息ID和消息名称
+// 浣跨敤macro鐢熸垚
 #define GEN_MESSAGE_MAP(XX) \
 	XX(MSG_DISCONNECT_NOTIFY, DisconnectNtf) \
 	XX(MSG_LOGIN_REQUEST, LoginReq) \
